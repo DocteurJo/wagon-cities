@@ -3,11 +3,18 @@
 import cities from '../cities';
 
 
-const setCities = () => {
+function setCities() {
   return {
     type: 'SET_CITY',
     payload: cities
   };
-};
+}
 
-export default setCities;
+function setActiveCity(city) {
+  return {
+    type: 'SET_ACTIVE_CITY',
+    payload: city,
+  };
+}
+
+export { setCities, setActiveCity };
